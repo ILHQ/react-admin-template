@@ -2,17 +2,7 @@ import classNames from 'classnames';
 
 export default function IndexPage() {
   const a = 1;
-   const b = 2;
-
-
-
-
-
-
-
-
-
-
+  const b = ['airbnb', 'prettier', 'plugin:prettier/recommended'];
 
   return (
     <div>

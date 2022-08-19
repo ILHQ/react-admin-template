@@ -5,9 +5,11 @@
     "start:prod": "cross-env UMI_ENV=prod TAILWIND_MODE=watch umi dev",
     "build": "umi build",
     "postinstall": "umi generate tmp",
+    "prepare": "husky install",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx"
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",

@@ -1,26 +1,21 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es6: true,
   },
-  extends: [
-    'airbnb',
-    'prettier',
-    'prettier/react',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['airbnb', 'prettier', 'plugin:prettier/recommended'],
   overrides: [],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     sourceType: 'module',
-    ecmaVersion: 'latest',
+    ecmaVersion: '2018',
   },
-  plugins: ['react', 'prettier'],
+  plugins: ['prettier'],
   rules: {
+    'react/destructuring-assignment': 0,
+    'react/prop-types': 1,
     'react/react-in-jsx-scope': 0,
     'no-unused-vars': 1,
     'global-require': 0,
