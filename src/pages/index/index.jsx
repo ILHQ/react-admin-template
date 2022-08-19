@@ -1,9 +1,18 @@
-import styles from './index.less';
-
 import classNames from 'classnames';
 
 export default function IndexPage() {
   const a = 1;
+   const b = 2;
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div>

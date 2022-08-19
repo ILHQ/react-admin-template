@@ -1,6 +1,6 @@
+import fs from 'fs';
 import lessToJs from 'less-vars-to-js';
 import path from 'path';
-import fs from 'fs';
 
 const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './var.less'), 'utf8'));
 

@@ -1,13 +1,29 @@
 module.exports = {
-  extends: [require.resolve('@umijs/fabric/dist/eslint')],
-  // in antd-design-pro
-  globals: {
-    ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION: true,
-    page: true,
-    REACT_APP_ENV: true,
+  env: {
+    browser: true,
+    es2021: true,
   },
-  plugins: ['prettier'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'prettier/react',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+  ],
+  overrides: [],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
+    ecmaVersion: 'latest',
+  },
+  plugins: ['react', 'prettier'],
   rules: {
+    'react/react-in-jsx-scope': 0,
+    'no-unused-vars': 1,
+    'global-require': 0,
     'no-var': 'error',
     'prettier/prettier': 'error',
     // 需要尾随逗号
