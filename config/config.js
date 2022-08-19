@@ -1,15 +1,17 @@
 import { defineConfig } from 'umi';
 import routes from './routes/index';
-const alias = require('../alias.config');
 import theme from '../src/styles/var';
-import pxtorem from 'postcss-px2rem';
+
+const alias = require('../alias.config');
 
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  mfsu: {},
   alias: alias.resolve.alias,
   routes,
+  favicon: process.env.UMI_ENV === 'dev' ? '/favicon.ico' : '/prod/favicon.ico',
   fastRefresh: {},
   theme,
   extraPostCSSPlugins: [

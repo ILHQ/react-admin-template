@@ -10,10 +10,34 @@ module.exports = {
       jsx: true,
     },
     sourceType: 'module',
-    ecmaVersion: '2018',
+    ecmaVersion: '2020',
+    parser: '@babel/eslint-parser',
   },
-  plugins: ['prettier'],
+  plugins: ['react', 'prettier'],
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@', './src'], // 别名路径
+          ['@c', './src/components'], // 别名路径
+          ['@p', './src/pages'], // 别名路径
+        ],
+      },
+    },
+  },
   rules: {
+    'react/jsx-props-no-spreading': 0,
+    'react/no-unstable-nested-components': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        js: 'never',
+        vue: 'never',
+      },
+    ],
     'react/destructuring-assignment': 0,
     'react/prop-types': 1,
     'react/react-in-jsx-scope': 0,
