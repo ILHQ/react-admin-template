@@ -4,7 +4,7 @@ export default function IndexPage() {
   const a = 1;
   const b = ['airbnb', 'prettier', 'plugin:prettier/recommended'];
 
-  const l = 123;
+  const l = 11111111;
   return (
     <div>
       <h1 className={classNames('mt-20', 'ml-20')}>
